@@ -6,7 +6,8 @@ O-LLVM 9.0.1
 ``` bash
 cd OLLVM-9.0.1
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_CREATE_XCODE_TOOLCHAIN=ON ../
+cmake -DCMAKE_BUILD_TYPE=Release  -DLLVM_INCLUDE_TESTS=OFF  -DLLVM_TARGETS_TO_BUILD="ARM;X86;AArch64"  -G "Ninja" ../
+# cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_CREATE_XCODE_TOOLCHAIN=ON ../
 make -j8 #8是你的CPU线程数量 比如8核16线程可以写 -j16 
 ```
 #### 整合到NDK
