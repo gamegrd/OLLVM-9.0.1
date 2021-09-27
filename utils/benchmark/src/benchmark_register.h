@@ -2,7 +2,8 @@
 #define BENCHMARK_REGISTER_H
 
 #include <vector>
-
+#include <stdexcept>
+#include <limits>
 #include "check.h"
 
 template <typename T>
